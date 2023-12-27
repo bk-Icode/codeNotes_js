@@ -83,4 +83,16 @@ switch (weekEnd) {
         break;
 }
 
+// truthy
+// works on asumption, here it just thinks if userEmail has some value. Here it just assumes. it is not comparing with true or something else anywhere
+// truthy Values => "0", 'false', ' ', [], {}, function(){}
+const userEmail = "bk.sri@ai"
+if(userEmail){
+    console.log("Got User Email");
+}else{
+    console.log("Dont have user Email");
+}
+
+// falsy
+// false, 0, -0, BigInt(0n), "", null, undefined, NaN
 

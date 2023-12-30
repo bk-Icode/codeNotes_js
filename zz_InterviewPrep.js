@@ -10,17 +10,17 @@
 
 //. How to check if the dataType is Array
 // Way_1, by using (.length) property
-let userEmail = [];
-if (userEmail.length === 0) {
-  console.log("Array is Empty");
-}
+// let userEmail = [];
+// if (userEmail.length === 0) {
+//   console.log("Array is Empty");
+// }
 
 //. How to check if object is Empty
 const empObj = {};
 // Object.keys(empObj) //= returns an Array, such as the array can be tested using .length property.
-if (Object.keys(empObj).length === 0) {
-  console.log(`empObj is Empty..`);
-}
+// if (Object.keys(empObj).length === 0) {
+//   console.log(`empObj is Empty..`);
+// }
 
 //. Browser Console
 false == 0; // true
@@ -38,32 +38,41 @@ let val1;
 
 //. ternary operator
 //= condition ? true : false, a kind of if-else condition.
-const iceTeaPrice = 100;
-iceTeaPrice >= 80
-  ? console.log("less than 80")
-  : console.log("greater than 80");
+// const iceTeaPrice = 100;
+// iceTeaPrice >= 80
+//   ? console.log("less than 80")
+//   : console.log("greater than 80");
 
 //! Loops
 //. for
 //. break & continue
 //= break, breaks the loop and stops the execution after it and directly goes out of loop.
-for (let i = 1; i <= 20; i++) {
-  if (i == 5) {
-    console.log(`Detected the value ${i}`);
-    break; // break, breaks the loop and stops the execution after it and directly goes out of loop.
-  }
-  console.log(`value of i is ${i}`);
-}
+// for (let i = 1; i <= 20; i++) {
+//   if (i == 5) {
+//     console.log(`Detected the value ${i}`);
+//     break; // break, breaks the loop and stops the execution after it and directly goes out of loop.
+//   }
+//   console.log(`value of i is ${i}`);
+// }
 
 //= continue, skips the flow for one time and continues with the next execution
-for (let i = 1; i <= 20; i++) {
-  if (i == 5) {
-    console.log(`Detected the value ${i}`);
-    continue; // skips the flow for one time and continues with the next execution
-  }
-  console.log(`value of i is ${i}`);
-}
+// for (let i = 1; i <= 20; i++) {
+//   if (i == 5) {
+//     console.log(`Detected the value ${i}`);
+//     continue; // skips the flow for one time and continues with the next execution
+//   }
+//   console.log(`value of i is ${i}`);
+// }
 
 //. for-of loop, generally used in Array.
 
 //. for-in loop used in Objects
+
+//. forEach loop, generally used in Arrayofobjects [{},{}]
+//= forEach, takes a callBack function and other optional properties too such as index and array
+//= it does not return anything.
+const arr = [1,2,3,4] 
+const val = arr.forEach((ele)=>{return ele;})
+console.log(val); //undefined
+
+

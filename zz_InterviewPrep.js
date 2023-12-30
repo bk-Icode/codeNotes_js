@@ -63,3 +63,7 @@ for (let i = 1; i <= 20; i++) {
   }
   console.log(`value of i is ${i}`);
 }
+
+//. for-of loop, generally used in Array.
+
+//. for-in loop used in Objects

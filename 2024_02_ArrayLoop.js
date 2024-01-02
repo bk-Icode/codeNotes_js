@@ -126,8 +126,35 @@ const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
 //. using Map
 const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-// const newNum = num.map((ele) => ele + 10);   // prints directly
-const newNum = num.map((ele) => {return ele * 2}); // if scope is opened, return keyword needs to be added.
+// // const newNum = num.map((ele) => ele + 10);   // prints directly
+// const newNum = num.map((ele) => {
+//   return ele * 2;
+// }); // if scope is opened, return keyword needs to be added.
 
-console.log(newNum);
+// console.log(newNum);
 
+//-------------------------------------------------------------
+
+//. Chaining
+const chainingFunc = num
+  .map((num) => {
+    return num * 10;
+  })
+  .map((num) => {
+    return num + 1;
+  })
+  .filter((num) => {
+    return num >= 40;
+  });
+
+console.log(chainingFunc);
+// --------------------------------------------------------------
+
+//. Reduce
+//= takes the callback function and an initialator
+//= reduce has 2args. (accumulator and currentVal), where it takes the result of operation as the accumulator.
+const myReduceNum = [1, 2, 3, 4, 5];
+const retReduce = myReduceNum.reduce((acc, curVal) => {
+                      return acc + curVal;
+                    },0);
+console.log(retReduce);

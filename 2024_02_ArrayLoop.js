@@ -147,14 +147,34 @@ const chainingFunc = num
     return num >= 40;
   });
 
-console.log(chainingFunc);
+// console.log(chainingFunc);
 // --------------------------------------------------------------
 
 //. Reduce
 //= takes the callback function and an initialator
 //= reduce has 2args. (accumulator and currentVal), where it takes the result of operation as the accumulator.
-const myReduceNum = [1, 2, 3, 4, 5];
-const retReduce = myReduceNum.reduce((acc, curVal) => {
-                      return acc + curVal;
-                    },0);
-console.log(retReduce);
+// const myReduceNum = [1, 2, 3, 4, 5];
+// const retReduce = myReduceNum.reduce((acc, curVal) => {
+//   // console.log(`Accumulator_${acc}, currentValue_${curVal}`);
+//                       return acc + curVal;
+//                     },3);
+// console.log(retReduce);
+
+const shoppingCart = [
+  {
+    item: "jsCourse",
+    price: 299,
+  },
+  {
+    item: "python Course",
+    price: 2999,
+  },
+  {
+    item: "py Course",
+    price: 12999,
+  },
+];
+const scPriceToPay = shoppingCart.reduce((acc, item) => {
+  return acc + item.price;
+}, 0);
+console.log(scPriceToPay);

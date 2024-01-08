@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM | Chai aur Code</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>javascript</li>
+    </ul>
+  </body>
+  <script>
+    function addLang(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`; // traverses through every element. Hence not recomended.
+    //   console.log(li);
+      document.querySelector(".language").appendChild(li);
+    }
+    addLang("py");
+    addLang("ruby");
+
+    function addOptLang(langName) {
+      const li = document.createElement("li"); //creates an element
+      li.appendChild(document.createTextNode(langName)); // appends the value in the div. Works same as innerHTML but it doesnot traverses through each element rather it appends another chile thats it. Recommended.
+      document.querySelector(".language").appendChild(li); //prints the created div in the document.
+    }
+    addOptLang("html");
+
+    // Edit the elements                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    const selectedLang = document.querySelector('li:nth-child(2)')
+    selectedLang.textContent = 'Mojo' // not optimized
+
+    const newLi = document.createElement('li')
+    newLi.textContent = 'c' // Way_3, to add content
+    selectedLang.replaceWith(newLi) // 1_To edit the elements.
+
+    const secondLang = document.querySelector('li:first-child')
+    secondLang.outerHTML = '<li>TypeScript</li>'
+    console.log(secondLang);
+
+    // Remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+  </script>
+</html>
